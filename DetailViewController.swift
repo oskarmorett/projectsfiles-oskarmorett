@@ -19,8 +19,17 @@ class DetailViewController: UIViewController {
    
    @IBAction func doneButtonTapped(_ sender: Any) { // Buton to add the new iteml to the list
    
-   
-      let newListTitle =  titleTextFild.text
+      guard let text = titleTextFild.text, text.characters.count > 0, /// diplay notififation whe textfield is empty
+            let text1 = contentTextController.text, text1.characters.count > 0 else {
+         
+         let alert = UIAlertController(title: "Ooops!", message: "Type a Title ", preferredStyle: UIAlertControllerStyle.alert)
+         alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+         self.present(alert, animated: true, completion: nil)
+         return
+         
+      }
+
+      let newListTitle =  titleTextFild.text  
       let newItemDescription = contentTextController.text
       
       item.title = newListTitle!
@@ -32,6 +41,7 @@ class DetailViewController: UIViewController {
    
     override func viewDidLoad() {
         super.viewDidLoad()
+      title = "New Task"
 
       titleTextFild.text = item.title
       contentTextController.text = item.description

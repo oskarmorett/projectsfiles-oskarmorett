@@ -21,10 +21,20 @@ class ListsViewController: UIViewController, UITableViewDataSource, UITableViewD
    
    @IBAction func addITemButtonTapped(_ sender: Any) {
       
+      
+      guard let text = newItemTextField.text, text.characters.count > 0 else {
+         
+         let alert = UIAlertController(title: "Oops!", message: "Enter a New To Do Task", preferredStyle: UIAlertControllerStyle.alert)
+         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+         self.present(alert, animated: true, completion: nil)
+         return
+         
+      }
 
       let newItem = Item(title: newItemTextField.text!, description: "")
       itemList.items.append(newItem)
       
+      newItemTextField.text = ""  /// cleans the textfield from previuse typo
    
       listTableView.reloadData()
    }
@@ -54,7 +64,7 @@ class ListsViewController: UIViewController, UITableViewDataSource, UITableViewD
 
    }
    
-   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+   override func prepare(for segue: UIStoryboardSegue, sender: Any?) { // send the infoto the nexty ViewControler
       
       if segue.identifier == "list2Item" {
       let detailViewController = segue.destination as! DetailViewController
@@ -63,7 +73,7 @@ class ListsViewController: UIViewController, UITableViewDataSource, UITableViewD
    }
    
    
-   
+   // to delete the cell by siwping
    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
       if editingStyle == .delete {
          itemList!.items.remove(at: indexPath.item)
@@ -71,31 +81,21 @@ class ListsViewController: UIViewController, UITableViewDataSource, UITableViewD
       }
    }
 
-   
-   
-   
-   
+
      override func viewWillAppear(_ animated: Bool) {
        listTableView.reloadData()
-      }
-   
+   }
    
 
     override func viewDidLoad() {
-      
-   //   guard let donde = currentList else{
-    //     return
-      //}
-
-      
+  
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+      title = "My Lists"
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+      
     }
    
    

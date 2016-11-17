@@ -7,11 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4C003DDB1DDCDDE2002CA012 /* add B.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C003DDA1DDCDDE2002CA012 /* add B.png */; };
+		4C04F6C61DDCEEF800975E5F /* Add-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C04F6C51DDCEEF800975E5F /* Add-01.png */; };
+		4C04F6CA1DDCF12B00975E5F /* steel-app-icon-512.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C04F6C91DDCF12B00975E5F /* steel-app-icon-512.png */; };
+		4C04F6CC1DDCF38B00975E5F /* 18095-save-button-design.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C04F6CB1DDCF38B00975E5F /* 18095-save-button-design.png */; };
+		4C04F6CE1DDD092A00975E5F /* vintage_frame___precut_png_by_nathl_fr-d6czhmr.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C04F6CD1DDD092A00975E5F /* vintage_frame___precut_png_by_nathl_fr-d6czhmr.png */; };
+		4C04F6D01DDD0C7400975E5F /* 15-600h.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C04F6CF1DDD0C7400975E5F /* 15-600h.png */; };
 		4CE738C81DDB528900892B41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE738C71DDB528900892B41 /* AppDelegate.swift */; };
 		4CE738CF1DDB528900892B41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CE738CE1DDB528900892B41 /* Assets.xcassets */; };
 		4CE738D21DDB528900892B41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CE738D01DDB528900892B41 /* LaunchScreen.storyboard */; };
-		4CE738DE1DDB541400892B41 /* Dots.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CE738DD1DDB541400892B41 /* Dots.png */; };
 		4CE738E01DDB588200892B41 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE738DF1DDB588200892B41 /* MainViewController.swift */; };
 		4CE738E21DDB58C700892B41 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE738E11DDB58C700892B41 /* DetailViewController.swift */; };
 		4CE738E41DDB5A3700892B41 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE738E31DDB5A3700892B41 /* DataModel.swift */; };
@@ -22,13 +25,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4C003DDA1DDCDDE2002CA012 /* add B.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "add B.png"; path = "../../../../../../Desktop/add B.png"; sourceTree = "<group>"; };
+		4C04F6C51DDCEEF800975E5F /* Add-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Add-01.png"; path = "../../../../Desktop/Add-01.png"; sourceTree = "<group>"; };
+		4C04F6C91DDCF12B00975E5F /* steel-app-icon-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "steel-app-icon-512.png"; path = "../../../../Desktop/steel-app-icon-512.png"; sourceTree = "<group>"; };
+		4C04F6CB1DDCF38B00975E5F /* 18095-save-button-design.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "18095-save-button-design.png"; path = "../../../../Desktop/18095-save-button-design.png"; sourceTree = "<group>"; };
+		4C04F6CD1DDD092A00975E5F /* vintage_frame___precut_png_by_nathl_fr-d6czhmr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "vintage_frame___precut_png_by_nathl_fr-d6czhmr.png"; path = "../../../../Desktop/vintage_frame___precut_png_by_nathl_fr-d6czhmr.png"; sourceTree = "<group>"; };
+		4C04F6CF1DDD0C7400975E5F /* 15-600h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "15-600h.png"; path = "../../../../Desktop/15-600h.png"; sourceTree = "<group>"; };
 		4CE738C41DDB528900892B41 /* Project 1 - OskarMorett.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project 1 - OskarMorett.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CE738C71DDB528900892B41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CE738CE1DDB528900892B41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4CE738D11DDB528900892B41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4CE738D31DDB528900892B41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4CE738DD1DDB541400892B41 /* Dots.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Dots.png; path = ../../../../../../Desktop/Dots.png; sourceTree = "<group>"; };
 		4CE738DF1DDB588200892B41 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		4CE738E11DDB58C700892B41 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = ../DetailViewController.swift; sourceTree = "<group>"; };
 		4CE738E31DDB5A3700892B41 /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
@@ -110,9 +116,12 @@
 		4CE738DC1DDB52CD00892B41 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				4C003DDA1DDCDDE2002CA012 /* add B.png */,
-				4CE738DD1DDB541400892B41 /* Dots.png */,
+				4C04F6CF1DDD0C7400975E5F /* 15-600h.png */,
+				4C04F6CD1DDD092A00975E5F /* vintage_frame___precut_png_by_nathl_fr-d6czhmr.png */,
+				4C04F6C91DDCF12B00975E5F /* steel-app-icon-512.png */,
+				4C04F6CB1DDCF38B00975E5F /* 18095-save-button-design.png */,
 				4CE738D31DDB528900892B41 /* Info.plist */,
+				4C04F6C51DDCEEF800975E5F /* Add-01.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -177,11 +186,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C04F6CC1DDCF38B00975E5F /* 18095-save-button-design.png in Resources */,
+				4C04F6CE1DDD092A00975E5F /* vintage_frame___precut_png_by_nathl_fr-d6czhmr.png in Resources */,
+				4C04F6C61DDCEEF800975E5F /* Add-01.png in Resources */,
 				4CE738D21DDB528900892B41 /* LaunchScreen.storyboard in Resources */,
-				4CE738DE1DDB541400892B41 /* Dots.png in Resources */,
 				4CE738CF1DDB528900892B41 /* Assets.xcassets in Resources */,
+				4C04F6CA1DDCF12B00975E5F /* steel-app-icon-512.png in Resources */,
 				4CE738EF1DDB97DC00892B41 /* Main.storyboard in Resources */,
-				4C003DDB1DDCDDE2002CA012 /* add B.png in Resources */,
+				4C04F6D01DDD0C7400975E5F /* 15-600h.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

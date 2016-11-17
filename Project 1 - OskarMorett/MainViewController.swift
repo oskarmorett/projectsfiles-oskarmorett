@@ -18,12 +18,26 @@ class MainViewController: UIViewController,UITableViewDataSource, UITableViewDel
    
    @IBAction func addListButtonTapped(_ sender: Any) {
       
-      let newList = ItemsList.init(title: newListTextFiels.text!)
+      
+      guard let text = newListTextFiels.text, text.characters.count > 0 else {
+         
+         let alert = UIAlertController(title: "Oops!", message: "Type New Todo List", preferredStyle: UIAlertControllerStyle.alert)
+         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+         self.present(alert, animated: true, completion: nil)
+         return
+         
+      }
+      
+      newListTextFiels.text = ""
+      
+      let newList = ItemsList.init(title: text)
            /// add text field text  to the list array
       toDolists.append(newList)
       print(newList)
       
      mainTableView.reloadData()
+      
+      
       
    }
    
@@ -57,19 +71,22 @@ class MainViewController: UIViewController,UITableViewDataSource, UITableViewDel
         toDolists.remove(at: indexPath.item)
          mainTableView.reloadData()
    }
-}
+   }
 
 
-        override func viewDidLoad() {
-        super.viewDidLoad()
-
+   override func viewDidLoad() {
+         
+      super.viewDidLoad()
+      
+      title = "To Do List"
+         
         // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
+   }
     
 
     // MARKL  DELAGATE STUFF
