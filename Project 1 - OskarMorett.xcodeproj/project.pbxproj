@@ -86,8 +86,8 @@
 			isa = PBXGroup;
 			children = (
 				4CE738E91DDB703E00892B41 /* ListsViewController.swift */,
-				4CE738EB1DDB70BD00892B41 /* ListTableViewCell.swift */,
-				4CE738E71DDB5CCA00892B41 /* MainTableViewCell.swift */,
+				4CE738DF1DDB588200892B41 /* MainViewController.swift */,
+				4CE738E11DDB58C700892B41 /* DetailViewController.swift */,
 				4CE738C71DDB528900892B41 /* AppDelegate.swift */,
 				4CE738D01DDB528900892B41 /* LaunchScreen.storyboard */,
 			);
@@ -98,8 +98,8 @@
 			isa = PBXGroup;
 			children = (
 				4CE738ED1DDB97DC00892B41 /* Main.storyboard */,
-				4CE738DF1DDB588200892B41 /* MainViewController.swift */,
-				4CE738E11DDB58C700892B41 /* DetailViewController.swift */,
+				4CE738E71DDB5CCA00892B41 /* MainTableViewCell.swift */,
+				4CE738EB1DDB70BD00892B41 /* ListTableViewCell.swift */,
 				4CE738CE1DDB528900892B41 /* Assets.xcassets */,
 			);
 			name = UI;
