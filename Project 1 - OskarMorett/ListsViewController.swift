@@ -10,7 +10,7 @@ import UIKit
 
 class ListsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
    
-   var itemList: ItemsList!
+   var itemList: DataModel.ItemsList!
    var currentItem = 0
    
    @IBOutlet weak var listTableView: UITableView!
@@ -31,11 +31,13 @@ class ListsViewController: UIViewController, UITableViewDataSource, UITableViewD
          
       }
 
-      let newItem = Item(title: newItemTextField.text!, description: "")
+      let newItem = DataModel.Item(title: newItemTextField.text!, descriptions: "")
       itemList.items.append(newItem)
       
       newItemTextField.text = ""  /// cleans the textfield from previuse typo
-   
+      
+      DataModel.shared.persistToDefaults()
+      
       listTableView.reloadData()
    }
    
@@ -77,6 +79,9 @@ class ListsViewController: UIViewController, UITableViewDataSource, UITableViewD
    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
       if editingStyle == .delete {
          itemList!.items.remove(at: indexPath.item)
+         
+         DataModel.shared.persistToDefaults()
+
          listTableView.reloadData()
       }
    }

@@ -15,7 +15,7 @@ class DetailViewController: UIViewController {
    
    @IBOutlet weak var contentTextController: UITextView! // to input content  of the list
    
-   var item: Item!
+   var item: DataModel.Item! 
    
    @IBAction func doneButtonTapped(_ sender: Any) { // Buton to add the new iteml to the list
    
@@ -33,9 +33,12 @@ class DetailViewController: UIViewController {
       let newItemDescription = contentTextController.text
       
       item.title = newListTitle!
-      item.description = newItemDescription!
+      item.descriptions = newItemDescription!
       
       _ = navigationController?.popViewController(animated: true)
+      
+      DataModel.shared.persistToDefaults()
+
    }
    
    
@@ -44,7 +47,7 @@ class DetailViewController: UIViewController {
       title = "New Task"
 
       titleTextFild.text = item.title
-      contentTextController.text = item.description
+      contentTextController.text = item.descriptions
         // Do any additional setup after loading the view.
     }
 

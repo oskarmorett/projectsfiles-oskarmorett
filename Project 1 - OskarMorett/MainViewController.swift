@@ -10,7 +10,7 @@ import UIKit
 
 class MainViewController: UIViewController,UITableViewDataSource, UITableViewDelegate{
    
-   var myList: ItemsList!
+   var myList: DataModel.ItemsList!
    
    @IBOutlet weak var mainTableView: UITableView!
    
@@ -30,10 +30,13 @@ class MainViewController: UIViewController,UITableViewDataSource, UITableViewDel
       
       newListTextFiels.text = ""
       
-      let newList = ItemsList.init(title: text)
+      let newList = DataModel.ItemsList.init(title: text)
            /// add text field text  to the list array
-      toDolists.append(newList)
+      DataModel.shared.toDolists.append(newList)
       print(newList)
+      
+      DataModel.shared.persistToDefaults()
+ 
       
      mainTableView.reloadData()
       
@@ -42,7 +45,7 @@ class MainViewController: UIViewController,UITableViewDataSource, UITableViewDel
    }
    
    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-      return toDolists.count
+      return DataModel.shared.toDolists.count
    }
    
    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -51,7 +54,7 @@ class MainViewController: UIViewController,UITableViewDataSource, UITableViewDel
       let cell = tableView.dequeueReusableCell(withIdentifier: "mainCell", for: indexPath) as! MainTableViewCell
       
       
-      cell.titleNameLabel.text = toDolists[indexPath.row].title
+      cell.titleNameLabel.text = DataModel.shared.toDolists[indexPath.row].title
       
       
       return cell
@@ -62,13 +65,16 @@ class MainViewController: UIViewController,UITableViewDataSource, UITableViewDel
          
          if segue.identifier == "main2list" {
             let listViewController = segue.destination as! ListsViewController
-            listViewController.itemList = toDolists[mainTableView.indexPathForSelectedRow!.row]
+            listViewController.itemList = DataModel.shared.toDolists[mainTableView.indexPathForSelectedRow!.row]
          }
          }
    
    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-        toDolists.remove(at: indexPath.item)
+        DataModel.shared.toDolists.remove(at: indexPath.item)
+         
+         DataModel.shared.persistToDefaults()
+
          mainTableView.reloadData()
    }
    }
